@@ -74,10 +74,6 @@ nav {
   font-size: 1.1rem;
 }
 
-.active-menu {
-  border-bottom: solid 3px #14a76c;
-}
-
 #clock {
   display: inline-block;
   margin-top: 3rem;
@@ -101,6 +97,16 @@ nav {
 
 #contact-section {
   text-align: center;
+  font-size: 1.3rem;
+}
+
+#contact-section ul {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
+  padding: 2rem;
+  width: fit-content;
 }
 
 /* Books section  */

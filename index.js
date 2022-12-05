@@ -59,7 +59,20 @@ form.addEventListener('submit', (e) => {
 navLinks.forEach((link) =>
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    togglePageDisplay(e.target.id);
+    librarySection.classList.add('hide');
+    formSection.classList.add('hide');
+    contactSection.classList.add('hide');
+    switch (e.target.id) {
+      case 'library-link':
+        librarySection.classList.remove('hide');
+        break;
+      case 'form-link':
+        formSection.classList.remove('hide');
+        break;
+      case 'contact-link':
+        contactSection.classList.remove('hide');
+        break;
+    }
   })
 );
 
