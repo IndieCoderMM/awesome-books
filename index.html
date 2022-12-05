@@ -15,9 +15,15 @@
       <nav>
         <h1><a href="#" id="logo">Awesome Books</a></h1>
         <ul class="nav-menu">
-          <li class="menu-item"><a href="#">Library</a></li>
-          <li class="menu-item"><a href="#">Add Book</a></li>
-          <li class="menu-item"><a href="#">Contact Us</a></li>
+          <li class="menu-item active-menu">
+            <a href="#" class="nav-link" id="library-link">Library</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="nav-link" id="form-link">Add Book</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="nav-link" id="contact-link">Contact Us</a>
+          </li>
         </ul>
       </nav>
       <p id="clock">March 9, 2022, 5:45 AM</p>
@@ -29,7 +35,7 @@
           <!-- This section will load dynamically -->
         </ul>
       </section>
-      <section id="book-form-section" class="section-page">
+      <section id="book-form-section" class="section-page hide">
         <h2>Add a New Book</h2>
         <form action="" id="book-form">
           <input type="text" id="title-input" placeholder="Title" required />
@@ -37,7 +43,7 @@
           <button type="submit" id="add-btn">Add</button>
         </form>
       </section>
-      <section id="contact-section" class="section-page">
+      <section id="contact-section" class="section-page hide">
         <h2>Contact Information</h2>
         <p>
           Feel free to contact us if you have any questions or you just want to

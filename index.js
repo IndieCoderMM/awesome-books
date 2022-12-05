@@ -1,24 +1,16 @@
 import { Book } from './modules/book.js';
 import { Library } from './modules/library.js';
+import { DateTime } from './modules/luxon.js';
 
 const form = document.querySelector('#book-form');
 const titleInput = document.querySelector('#title-input');
 const authorInput = document.querySelector('#author-input');
 const booksContainer = document.querySelector('#book-list');
-
-const myLibrary = new Library();
-myLibrary.loadLocalData();
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const title = titleInput.value.trim();
-  const author = authorInput.value.trim();
-  if (title.length === 0 || author.length === 0) return;
-  const book = new Book({ title: title, author: author });
-  myLibrary.addNewBook(book);
-  updateBookDisplay(myLibrary.bookList);
-  form.reset();
-});
+const clockElement = document.querySelector('#clock');
+const navLinks = document.querySelectorAll('.nav-link');
+const librarySection = document.querySelector('#library-section');
+const formSection = document.querySelector('#book-form-section');
+const contactSection = document.querySelector('#contact-section');
 
 const updateBookDisplay = (bookList) => {
   booksContainer.textContent = '';
@@ -46,3 +38,34 @@ const createBookItem = (book) => {
   li.appendChild(btn);
   return li;
 };
+
+// Init library data & show in page
+const myLibrary = new Library();
+myLibrary.loadLocalData();
+updateBookDisplay(myLibrary.bookList);
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const title = titleInput.value.trim();
+  const author = authorInput.value.trim();
+  // Skip empty input value
+  if (title.length === 0 || author.length === 0) return;
+  const book = new Book({ title: title, author: author });
+  myLibrary.addNewBook(book);
+  updateBookDisplay(myLibrary.bookList);
+  form.reset();
+});
+
+navLinks.forEach((link) =>
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    togglePageDisplay(e.target.id);
+  })
+);
+
+setInterval(() => {
+  const now = DateTime.now();
+  clockElement.textContent = now
+    .setLocale('en-US')
+    .toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+}, 1000);

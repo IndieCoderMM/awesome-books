@@ -32,15 +32,27 @@ p {
   line-height: 1.6rem;
 }
 
+.hide {
+  display: none;
+}
+
 /* || Header section  */
 header {
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #272727;
+  padding: 0 1rem;
 }
 
 #logo {
@@ -62,8 +74,19 @@ nav {
   font-size: 1.1rem;
 }
 
+.active-menu {
+  border-bottom: solid 3px #14a76c;
+}
+
 #clock {
-  text-align: right;
+  display: inline-block;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  color: #ffe400;
+  border: solid 1px #ffe400;
+  border-radius: 0.25rem;
 }
 
 .menu-item:hover a {
@@ -76,18 +99,10 @@ nav {
   padding: 1rem 2rem;
 }
 
-/* #library-section {
-  background-color: coral;
-}
-
-#book-form-section {
-  background-color: aquamarine;
-}
-
 #contact-section {
-  background-color: darkorchid;
   text-align: center;
-} */
+}
+
 /* Books section  */
 #book-list {
   width: 90%;
@@ -111,12 +126,14 @@ nav {
 .remove-btn {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #ff652f;
-  color: #fff;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s;
 }
 
 .remove-btn:hover {
-  background-color: #fe8052;
+  box-shadow: inset 6.5em 0 0 0 #ff652f;
 }
 
 /* Form section  */
@@ -140,20 +157,30 @@ nav {
   font-weight: 600;
   background-color: #14a76c;
   color: white;
+  border: solid 2px #000;
   border-radius: 0.25rem;
+  transition: all 0.3s ease;
 }
 
 input {
   padding: 0.5rem;
 }
 
-::placeholder {
+input::placeholder {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.9rem;
 }
 
+input:focus {
+  outline-color: #14a76c;
+}
+
 #add-btn:hover {
-  background-color: #0ec77d;
+  background-color: #fff;
+  color: #14a76c;
+  border-color: #14a76c;
+  box-shadow: 0 0.5em 0.5em -0.4em #0ec77d;
+  transform: translateY(-0.25em);
 }
 
 /* || Footer section  */
