@@ -11,8 +11,11 @@ a {
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
+  color: #747474;
 }
 
 ul {
@@ -21,16 +24,27 @@ ul {
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #272727;
+  color: #fff;
+}
+
+p {
+  line-height: 1.6rem;
 }
 
 /* || Header section  */
+header {
+  padding: 0.5rem 1rem;
+}
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: cornflowerblue;
+}
+
+#logo {
+  color: #ffe400;
 }
 
 .nav-menu {
@@ -43,12 +57,17 @@ nav {
   text-align: center;
 }
 
+.menu-item a {
+  color: #14a76c;
+  font-size: 1.1rem;
+}
+
 #clock {
   text-align: right;
 }
 
-.menu-item:hover {
-  background-color: cadetblue;
+.menu-item:hover a {
+  color: #0ae88f;
 }
 
 /* || Page section  */
@@ -57,7 +76,7 @@ nav {
   padding: 1rem 2rem;
 }
 
-#library-section {
+/* #library-section {
   background-color: coral;
 }
 
@@ -68,7 +87,7 @@ nav {
 #contact-section {
   background-color: darkorchid;
   text-align: center;
-}
+} */
 /* Books section  */
 #book-list {
   width: 90%;
@@ -77,6 +96,7 @@ nav {
 
 .book-item {
   background-color: white;
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,12 +105,18 @@ nav {
 }
 
 .book-item:nth-child(even) {
-  background-color: beige;
+  background-color: #eee;
 }
 
 .remove-btn {
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  background-color: #ff652f;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background-color: #fe8052;
 }
 
 /* Form section  */
@@ -112,7 +138,7 @@ nav {
   padding: 0.5rem 1rem;
   font-size: 1.3rem;
   font-weight: 600;
-  background-color: blueviolet;
+  background-color: #14a76c;
   color: white;
   border-radius: 0.25rem;
 }
@@ -122,17 +148,17 @@ input {
 }
 
 ::placeholder {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.9rem;
 }
 
 #add-btn:hover {
-  background-color: magenta;
+  background-color: #0ec77d;
 }
 
 /* || Footer section  */
 footer {
-  background-color: darkslategrey;
+  background-color: #747474;
   text-align: center;
   padding: 2rem;
   color: white;
