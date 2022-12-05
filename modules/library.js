@@ -1,6 +1,6 @@
 const LOCAL_KEY = 'library-data';
 
-export class Library {
+export default class Library {
   constructor() {
     this.bookList = [];
   }
@@ -12,7 +12,7 @@ export class Library {
 
   removeBook(bookId) {
     this.bookList = this.bookList.filter(
-      (book) => book.id !== parseInt(bookId)
+      (book) => book.id !== parseInt(bookId, 10),
     );
     this.updateStorage();
   }
