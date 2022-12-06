@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can visit the live version on [Awesomebooks Website](https://indiecodermm.github.io/awesome-books/).
+You can visit the live version on [www.awesomebooks.indiecoder.com](https://indiecodermm.github.io/awesome-books/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
