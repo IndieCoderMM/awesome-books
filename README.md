@@ -28,9 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books Website <a name="about-project"></a>
+# 📖 Awesomebooks <a name="about-project"></a>
 
-A single-page website for managing books.
+**Awesomebooks** is a single-page website for managing and organizing books.
 
 ![Screenshot](./app_screenshot.png)
 
@@ -49,7 +49,7 @@ A single-page website for managing books.
 - **Single Page App**
 - **Add/remove books**
 - **View list of books**
-- **Store data in `localStorage`**
+- **Preserve data in localStorage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,7 +57,7 @@ A single-page website for managing books.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+You can visit the live version on [Awesomebooks Website](https://indiecodermm.github.io/awesome-books/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
